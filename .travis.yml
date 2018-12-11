@@ -6,12 +6,17 @@ branchs:
   - master
 install:
 - npm install
-script:
-- npm test
 addons:
   ssh_known_hosts: 188.131.206.251
 after_success:
 - ssh root@188.131.206.251 "./travis_build"
 before_install:
 - openssl aes-256-cbc -K $encrypted_cac45ecce511_key -iv $encrypted_cac45ecce511_iv
-  -in jhx_rsa.enc -out ~/.ssh/jhx_rsa -d
+  -in jhx_rsa.enc -out ~\/.ssh/jhx_rsa -d
+before_script:
+  - npm install -g gulp-cli
+script: 
+  - gulp
+  - npm test
+deploy:
+  skip_cleanup: true
