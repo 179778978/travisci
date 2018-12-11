@@ -7,7 +7,7 @@ branchs:
 before_install:
 - openssl aes-256-cbc -K $encrypted_cac45ecce511_key -iv $encrypted_cac45ecce511_iv
   -in jhx_rsa.enc -out ~\/.ssh/jhx_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/jhx_rsa
 install:
 - npm install
 script:
