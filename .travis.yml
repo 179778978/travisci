@@ -10,8 +10,10 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
 install:
 - npm install
+script:
+- npm test
 addons:
   ssh_known_hosts: 188.131.206.251
 
 after_success:
-  - ssh root@188.131.206.251 "./your-shell-script"
+  - ssh root@188.131.206.251 "./travis_build"
