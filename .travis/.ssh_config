@@ -1,0 +1,12 @@
+User root
+Host ydserver
+HostName 188.131.206.251
+Port 54322
+StrictHostKeyChecking no
+IdentityFile ~/.ssh/jhx_rsa
+IdentitiesOnly yes 
+Protocol 2
+Compression yes 
+ServerAliveInterval 60
+ServerAliveCountMax 20
+LogLevel INFO
