@@ -9,7 +9,7 @@ install:
 addons:
   ssh_known_hosts: 188.131.206.251
 after_success:
-- ssh root@188.131.206.251 "./travis_build"
+- ssh root@ydserver "./travis_build"
 before_install:
 - openssl aes-256-cbc -K $encrypted_b5ed83347018_key -iv $encrypted_b5ed83347018_iv
   -in ./.travis/jhx_rsa.enc -out ~/.ssh/jhx_rsa -d

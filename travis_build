@@ -1,1 +1,1 @@
-ssh root@ydserver "cd /home ls"
+"cd /home ls"
